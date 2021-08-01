@@ -1,0 +1,64 @@
+﻿@model IEnumerable<TesteProgramacao.Models.Livro>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="CriarLivro">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Edicao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DtLancamento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.editoras)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.autores)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Edicao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DtLancamento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.editoras.editoraId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.autores.autorId)
+            </td>
+            <td>
+                <a asp-action="AtualizarLivro" asp-route-id="@item.livroId">Edit</a> |
+                <a asp-action="ExcluirLivro" asp-route-id="@item.livroId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
