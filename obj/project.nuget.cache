@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "lRFYoJC6d3K7c7eNFDUEawo4rL9PezB30A6WKMWlWCn7aTsJ+G7TytDufG9eYmdtMk5q0DfigjYr0YILLJd8/g==",
+  "dgSpecHash": "XkScRlJiaEv69tj4CXRkkcjJ0vbYxfKX5gGexczBpTk3ShfHBpAv0xU1edaDMe2tprmlhzhbieD4P/FqYsOm0Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\kelly\\Music\\git\\TesteProgramacao\\TesteProgramacao.csproj",
+  "projectFilePath": "C:\\Users\\kelly\\Documents\\GitHub\\RaSystem-Teste\\TesteProgramacao.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\kelly\\.nuget\\packages\\microsoft.aspnet.webapi.client\\5.2.6\\microsoft.aspnet.webapi.client.5.2.6.nupkg.sha512",
     "C:\\Users\\kelly\\.nuget\\packages\\microsoft.aspnetcore\\2.1.7\\microsoft.aspnetcore.2.1.7.nupkg.sha512",
