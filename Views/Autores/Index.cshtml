@@ -4,16 +4,16 @@
     ViewData["Title"] = "Index";
 }
 
-<h2>Index</h2>
+<h2>Autores</h2>
 
 <p>
-    <a asp-action="CriarAutor">Create New</a>
+    <a asp-action="CriarAutor">Novo autor(a)</a>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Nome)
+                @Html.DisplayNameFor(model => model.NomeAutor)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.CPF)
@@ -31,7 +31,7 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Nome)
+                @Html.DisplayFor(modelItem => item.NomeAutor)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.CPF)
@@ -43,8 +43,8 @@
                 @Html.DisplayFor(modelItem => item.Email)
             </td>
             <td>
-                <a asp-action="AtualizarAutor" asp-route-id="@item.autorId">Edit</a> | |
-                <a asp-action="ExcluirAutor" asp-route-id="@item.autorId">Delete</a>
+                <a asp-action="AtualizarAutor" asp-route-id="@item.autorId">Editar</a> | 
+                <a asp-action="ExcluirAutor" asp-route-id="@item.autorId">Excluir</a>
             </td>
         </tr>
 }

@@ -4,10 +4,10 @@
     ViewData["Title"] = "Index";
 }
 
-<h2>Index</h2>
+<h2>Editoras</h2>
 
 <p>
-    <a asp-action="CriarEditora">Create New</a>
+    <a asp-action="CriarEditora">Adicionar editora</a>
 </p>
 <table class="table">
     <thead>
@@ -16,7 +16,7 @@
                 @Html.DisplayNameFor(model => model.CNPJ)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Nome)
+                @Html.DisplayNameFor(model => model.NomeEditora)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Endereco)
@@ -31,14 +31,14 @@
                 @Html.DisplayFor(modelItem => item.CNPJ)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Nome)
+                @Html.DisplayFor(modelItem => item.NomeEditora)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Endereco)
             </td>
             <td>
-                <a asp-action="AtualizarEditora" asp-route-id="@item.editoraId">Edit</a> | |
-                <a asp-action="ExcluirEditora" asp-route-id="@item.editoraId">Delete</a>
+                <a asp-action="AtualizarEditora" asp-route-id="@item.editoraId">Editar</a> | |
+                <a asp-action="ExcluirEditora" asp-route-id="@item.editoraId">Excluir</a>
             </td>
         </tr>
 }

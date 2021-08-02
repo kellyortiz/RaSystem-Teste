@@ -10,8 +10,8 @@ namespace TesteProgramacao.Models
     {
         public int editoraId { get; set; }
         public string CNPJ { get; set; }
-        public string Nome { get; set; }
+        public string NomeEditora { get; set; }
         public string Endereco { get; set; }
-        public ICollection<Livro> livros { get; set; }
+        public ICollection<Livro> livro { get; set; }
     }
 }

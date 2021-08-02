@@ -18,6 +18,7 @@ namespace TesteProgramacao.Models
 
         public int editoraId { get; set; }
         public int autorId { get; set; }
+
         public Editora editoras { get; set; }
         public Autor autores { get; set; }
     }

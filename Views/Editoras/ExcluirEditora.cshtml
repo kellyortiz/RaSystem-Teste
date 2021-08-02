@@ -4,9 +4,9 @@
     ViewData["Title"] = "ExcluirEditora";
 }
 
-<h2>ExcluirEditora</h2>
+<h2>Excluir Dados</h2>
 
-<h3>Are you sure you want to delete this?</h3>
+<h3>Deseja mesmo excluir?</h3>
 <div>
     <h4>Editora</h4>
     <hr />
@@ -18,10 +18,10 @@
             @Html.DisplayFor(model => model.CNPJ)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.Nome)
+            @Html.DisplayNameFor(model => model.NomeEditora)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.Nome)
+            @Html.DisplayFor(model => model.NomeEditora)
         </dd>
         <dt>
             @Html.DisplayNameFor(model => model.Endereco)
@@ -33,7 +33,7 @@
     
     <form asp-action="ExcluirEditora">
         <input type="hidden" asp-for="editoraId" />
-        <input type="submit" value="Delete" class="btn btn-default" /> |
-        <a asp-action="Index">Back to List</a>
+        <input type="submit" value="Excluir" class="btn btn-default" /> |
+        <a asp-action="Index">Voltar para a lista</a>
     </form>
 </div>
