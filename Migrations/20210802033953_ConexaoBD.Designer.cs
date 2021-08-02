@@ -10,8 +10,8 @@ using TesteProgramacao.Models;
 namespace TesteProgramacao.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20210801222957_CriacaoBD")]
-    partial class CriacaoBD
+    [Migration("20210802033953_ConexaoBD")]
+    partial class ConexaoBD
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -33,7 +33,7 @@ namespace TesteProgramacao.Migrations
 
                     b.Property<string>("Email");
 
-                    b.Property<string>("Nome");
+                    b.Property<string>("NomeAutor");
 
                     b.HasKey("autorId");
 
@@ -50,7 +50,7 @@ namespace TesteProgramacao.Migrations
 
                     b.Property<string>("Endereco");
 
-                    b.Property<string>("Nome");
+                    b.Property<string>("NomeEditora");
 
                     b.HasKey("editoraId");
 
@@ -81,18 +81,18 @@ namespace TesteProgramacao.Migrations
 
                     b.HasIndex("editoraId");
 
-                    b.ToTable("livros");
+                    b.ToTable("livro");
                 });
 
             modelBuilder.Entity("TesteProgramacao.Models.Livro", b =>
                 {
                     b.HasOne("TesteProgramacao.Models.Autor", "autores")
-                        .WithMany("livros")
+                        .WithMany("livro")
                         .HasForeignKey("autorId")
                         .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("TesteProgramacao.Models.Editora", "editoras")
-                        .WithMany("livros")
+                        .WithMany("livro")
                         .HasForeignKey("editoraId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
