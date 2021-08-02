@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kelly\\Documents\\GitHub\\RaSystem-Teste\\TesteProgramacao.csproj": {}
+    "C:\\Users\\kelly\\Source\\Repos\\RaSystem-Teste\\TesteProgramacao.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kelly\\Documents\\GitHub\\RaSystem-Teste\\TesteProgramacao.csproj": {
+    "C:\\Users\\kelly\\Source\\Repos\\RaSystem-Teste\\TesteProgramacao.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kelly\\Documents\\GitHub\\RaSystem-Teste\\TesteProgramacao.csproj",
+        "projectUniqueName": "C:\\Users\\kelly\\Source\\Repos\\RaSystem-Teste\\TesteProgramacao.csproj",
         "projectName": "TesteProgramacao",
-        "projectPath": "C:\\Users\\kelly\\Documents\\GitHub\\RaSystem-Teste\\TesteProgramacao.csproj",
+        "projectPath": "C:\\Users\\kelly\\Source\\Repos\\RaSystem-Teste\\TesteProgramacao.csproj",
         "packagesPath": "C:\\Users\\kelly\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kelly\\Documents\\GitHub\\RaSystem-Teste\\obj\\",
+        "outputPath": "C:\\Users\\kelly\\Source\\Repos\\RaSystem-Teste\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

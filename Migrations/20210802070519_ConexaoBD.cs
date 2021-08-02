@@ -15,8 +15,8 @@ namespace TesteProgramacao.Migrations
                     autorId = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     NomeAutor = table.Column<string>(maxLength: 100, nullable: true),
-                    CPF = table.Column<string>(maxLength: 11, nullable: true),
-                    Celular = table.Column<int>(maxLength: 11, nullable: false),
+                    CPF = table.Column<string>(nullable: true),
+                    Celular = table.Column<int>(nullable: false),
                     Email = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
@@ -30,7 +30,7 @@ namespace TesteProgramacao.Migrations
                 {
                     editoraId = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    CNPJ = table.Column<string>(maxLength: 14, nullable: true),
+                    CNPJ = table.Column<string>(nullable: true),
                     NomeEditora = table.Column<string>(maxLength: 100, nullable: true),
                     Endereco = table.Column<string>(nullable: true)
                 },
@@ -50,23 +50,24 @@ namespace TesteProgramacao.Migrations
                     DtLancamento = table.Column<DateTime>(nullable: false),
                     Email = table.Column<string>(nullable: true),
                     editoraId = table.Column<int>(nullable: false),
-                    autorId = table.Column<int>(nullable: false)
+                    autorId = table.Column<int>(nullable: false),
+                    autoresautorId = table.Column<int>(nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_livro", x => x.livroId);
                     table.ForeignKey(
-                        name: "FK_livro_autores_autorId",
+                        name: "FK_livro_editoras_autorId",
                         column: x => x.autorId,
-                        principalTable: "autores",
-                        principalColumn: "autorId",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_livro_editoras_editoraId",
-                        column: x => x.editoraId,
                         principalTable: "editoras",
                         principalColumn: "editoraId",
                         onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_livro_autores_autoresautorId",
+                        column: x => x.autoresautorId,
+                        principalTable: "autores",
+                        principalColumn: "autorId",
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateIndex(
@@ -75,9 +76,9 @@ namespace TesteProgramacao.Migrations
                 column: "autorId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_livro_editoraId",
+                name: "IX_livro_autoresautorId",
                 table: "livro",
-                column: "editoraId");
+                column: "autoresautorId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -86,10 +87,10 @@ namespace TesteProgramacao.Migrations
                 name: "livro");
 
             migrationBuilder.DropTable(
-                name: "autores");
+                name: "editoras");
 
             migrationBuilder.DropTable(
-                name: "editoras");
+                name: "autores");
         }
     }
 }

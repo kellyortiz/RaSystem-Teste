@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -25,10 +26,15 @@ namespace TesteProgramacao.Models
         [Display(Name = "E-mail")]
         public string Email { get; set; }
 
-        [Display(Name = "Editora")]
         public int editoraId { get; set; }
-        [Display(Name = "Autor")]
+
+        [Display(Name = "Editora")]
+        [ForeignKey("editoraId")]
+
         public int autorId { get; set; }
+
+        [Display(Name = "Autor(a)")]
+        [ForeignKey("autorId")]
 
         public Editora editoras { get; set; }
         public Autor autores { get; set; }

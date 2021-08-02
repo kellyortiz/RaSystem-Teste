@@ -13,13 +13,12 @@ namespace TesteProgramacao.Models
         public int editoraId { get; set; }
 
         [Display(Name = "CNPJ"),
-             DisplayFormat(DataFormatString = "{0:##.###.###/####-##}", ApplyFormatInEditMode = true),
-             StringLength(14, MinimumLength = 14)]
+               RegularExpression(@"^\d{3}.?\d{3}.?\d{3}/?\d{3}-?\d{2}$", ErrorMessage = "CNPJ em formato inválido.")]
         public string CNPJ { get; set; }
 
         [Display(Name = "Nome da Editora"),
             StringLength(100),
-            RegularExpression(@"^[A-Z]+[a-zA-Z""'\s-]*$", ErrorMessage = "Apenas Letras!")]
+            RegularExpression(@"^[a-zA-Z]+[a-zA-Z""'\s-]*$", ErrorMessage = "Apenas Letras!")]
         public string NomeEditora { get; set; }
 
         [Display(Name = "Endereço")]

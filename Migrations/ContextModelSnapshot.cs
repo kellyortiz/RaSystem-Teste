@@ -25,11 +25,9 @@ namespace TesteProgramacao.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("CPF")
-                        .HasMaxLength(11);
+                    b.Property<string>("CPF");
 
-                    b.Property<int>("Celular")
-                        .HasMaxLength(11);
+                    b.Property<int>("Celular");
 
                     b.Property<string>("Email");
 
@@ -47,8 +45,7 @@ namespace TesteProgramacao.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("CNPJ")
-                        .HasMaxLength(14);
+                    b.Property<string>("CNPJ");
 
                     b.Property<string>("Endereco");
 
@@ -76,28 +73,29 @@ namespace TesteProgramacao.Migrations
 
                     b.Property<int>("autorId");
 
+                    b.Property<int?>("autoresautorId");
+
                     b.Property<int>("editoraId");
 
                     b.HasKey("livroId");
 
                     b.HasIndex("autorId");
 
-                    b.HasIndex("editoraId");
+                    b.HasIndex("autoresautorId");
 
                     b.ToTable("livro");
                 });
 
             modelBuilder.Entity("TesteProgramacao.Models.Livro", b =>
                 {
-                    b.HasOne("TesteProgramacao.Models.Autor", "autores")
+                    b.HasOne("TesteProgramacao.Models.Editora", "editoras")
                         .WithMany("livro")
                         .HasForeignKey("autorId")
                         .OnDelete(DeleteBehavior.Cascade);
 
-                    b.HasOne("TesteProgramacao.Models.Editora", "editoras")
+                    b.HasOne("TesteProgramacao.Models.Autor", "autores")
                         .WithMany("livro")
-                        .HasForeignKey("editoraId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("autoresautorId");
                 });
 #pragma warning restore 612, 618
         }

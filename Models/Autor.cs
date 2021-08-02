@@ -11,20 +11,16 @@ namespace TesteProgramacao.Models
         public int autorId { get; set; }
         [Display(Name = "Nome do Autor"),
           StringLength(100),
-          RegularExpression(@"^[a-z]+[a-zA-Z""'\s-]*$", ErrorMessage = "Apenas Letras!")]
+          RegularExpression(@"^[a-zA-Z]+[a-zA-Z""'\s-]*$", ErrorMessage = "Apenas Letras!")]
         public string NomeAutor { get; set; }
 
         [Display(Name = "CPF"),
-            DisplayFormat(DataFormatString = "{0:###.###.###-##}", ApplyFormatInEditMode = true),
-            StringLength(11, MinimumLength = 11)]
+            RegularExpression(@"^(\d{3}.\d{3}.\d{3}-\d{2})|(\d{11})$", ErrorMessage = "CPF em formato inválido.")]
         public string CPF { get; set; }
 
-        [Display(Name = "Celular"),
-            StringLength(11, MinimumLength = 11)]
         public int Celular { get; set; }
-
-        [Display(Name = "E-mail")]
-            [RegularExpression(".+\\@.+\\..+", ErrorMessage = "E-mail em formato inválido.")]
+        [Display(Name = "E-mail"),
+            RegularExpression(@"\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*\s*", ErrorMessage = "E-mail em formato inválido.")]
         public string Email { get; set; }
         public ICollection<Livro> livro { get; set; }
     }

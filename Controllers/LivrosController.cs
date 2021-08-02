@@ -24,7 +24,7 @@ namespace TesteProgramacao.Controllers
         [HttpGet]
         public IActionResult CriarLivro()
         {
-            return View();
+                return View();
         }
         [HttpPost]
         public async Task<IActionResult> CriarLivro(Livro livro)
@@ -86,5 +86,8 @@ namespace TesteProgramacao.Controllers
             }
             else return NotFound();
         }
+
     }
+
+
 }
