@@ -48,3 +48,4 @@ C:\Users\kelly\Documents\GitHub\RaSystem-Teste\obj\Release\netcoreapp2.1\TestePr
 C:\Users\kelly\Documents\GitHub\RaSystem-Teste\obj\Release\netcoreapp2.1\TesteProgramacao.pdb
 C:\Users\kelly\Documents\GitHub\RaSystem-Teste\obj\Release\netcoreapp2.1\TesteProgramacao.genruntimeconfig.cache
 C:\Users\kelly\Documents\GitHub\RaSystem-Teste\obj\Release\netcoreapp2.1\TesteProgramacao.csproj.CopyComplete
+C:\Users\kelly\Documents\GitHub\RaSystem-Teste\obj\Release\netcoreapp2.1\TesteProgramacao.csproj.AssemblyReference.cache

@@ -4,9 +4,9 @@
     ViewData["Title"] = "ExcluirLivro";
 }
 
-<h2>ExcluirLivro</h2>
+<h2>Excluir Dados</h2>
 
-<h3>Are you sure you want to delete this?</h3>
+<h3>Deseja mesmo excluir?</h3>
 <div>
     <h4>Livro</h4>
     <hr />
@@ -51,7 +51,7 @@
     
     <form asp-action="ExcluirLivro">
         <input type="hidden" asp-for="livroId" />
-        <input type="submit" value="Delete" class="btn btn-default" /> |
-        <a asp-action="Index">Back to List</a>
+        <input type="submit" value="Excluir" class="btn btn-default" /> |
+        <a asp-action="Index">Voltar para a lista</a>
     </form>
 </div>

@@ -43,7 +43,7 @@ namespace TesteProgramacao.Controllers
         {
             if (id != null)
             {
-                Editora editora = _context.editoras.Find();
+                Editora editora= _context.editoras.Find(id);
                 return View(editora);
             }
             else return NotFound();
