@@ -43,19 +43,20 @@ namespace TesteProgramacao.Migrations
                 name: "livro",
                 columns: table => new
                 {
-                    livroId = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    livroId = table.Column<int>(nullable: false),
                     Nome = table.Column<string>(nullable: true),
                     Edicao = table.Column<int>(nullable: false),
                     DtLancamento = table.Column<DateTime>(nullable: false),
                     Email = table.Column<string>(nullable: true),
-                    editoraId = table.Column<int>(nullable: false),
+                    editoraId = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     autorId = table.Column<int>(nullable: false),
                     autoresautorId = table.Column<int>(nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_livro", x => x.livroId);
+                    table.PrimaryKey("PK_livro", x => x.editoraId);
+                    table.UniqueConstraint("AK_livro_autorId", x => x.autorId);
                     table.ForeignKey(
                         name: "FK_livro_editoras_autorId",
                         column: x => x.autorId,
@@ -69,11 +70,6 @@ namespace TesteProgramacao.Migrations
                         principalColumn: "autorId",
                         onDelete: ReferentialAction.Restrict);
                 });
-
-            migrationBuilder.CreateIndex(
-                name: "IX_livro_autorId",
-                table: "livro",
-                column: "autorId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_livro_autoresautorId",

@@ -17,7 +17,6 @@ namespace TesteProgramacao.Models
         [Display(Name = "CPF"),
             RegularExpression(@"^(\d{3}.\d{3}.\d{3}-\d{2})|(\d{11})$", ErrorMessage = "CPF em formato inválido.")]
         public string CPF { get; set; }
-
         public int Celular { get; set; }
         [Display(Name = "E-mail"),
             RegularExpression(@"\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*\s*", ErrorMessage = "E-mail em formato inválido.")]

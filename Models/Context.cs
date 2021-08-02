@@ -18,7 +18,9 @@ namespace TesteProgramacao.Models
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Livro>()
-                .HasKey(bc => new { bc.livroId });
+                .HasKey(bc => new { bc.autorId });
+            modelBuilder.Entity<Livro>()
+                .HasKey(bc => new { bc.editoraId });
         }
     }
 }

@@ -10,7 +10,7 @@ using TesteProgramacao.Models;
 namespace TesteProgramacao.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20210802070519_ConexaoBD")]
+    [Migration("20210802072819_ConexaoBD")]
     partial class ConexaoBD
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -61,7 +61,7 @@ namespace TesteProgramacao.Migrations
 
             modelBuilder.Entity("TesteProgramacao.Models.Livro", b =>
                 {
-                    b.Property<int>("livroId")
+                    b.Property<int>("editoraId")
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
@@ -77,11 +77,11 @@ namespace TesteProgramacao.Migrations
 
                     b.Property<int?>("autoresautorId");
 
-                    b.Property<int>("editoraId");
+                    b.Property<int>("livroId");
 
-                    b.HasKey("livroId");
+                    b.HasKey("editoraId");
 
-                    b.HasIndex("autorId");
+                    b.HasAlternateKey("autorId");
 
                     b.HasIndex("autoresautorId");
 
