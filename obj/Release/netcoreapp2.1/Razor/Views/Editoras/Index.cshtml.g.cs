@@ -65,7 +65,7 @@ using TesteProgramacao.Models;
             WriteLiteral("\r\n<h2>Editoras</h2>\r\n\r\n<p>\r\n    ");
             EndContext();
             BeginContext(128, 50, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9740ce411f2d4b57b4c0805118359079", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0370d7644c6b40a9bb02f7c8d098c524", async() => {
                 BeginContext(157, 17, true);
                 WriteLiteral("Adicionar editora");
                 EndContext();
@@ -155,7 +155,7 @@ using TesteProgramacao.Models;
             WriteLiteral("\r\n            </td>\r\n            <td>\r\n                ");
             EndContext();
             BeginContext(976, 74, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e09d093f4c884d0984abd34dc74230a3", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "43e8325a2ef448b0823388394b9d819b", async() => {
                 BeginContext(1040, 6, true);
                 WriteLiteral("Editar");
                 EndContext();
@@ -190,7 +190,7 @@ using TesteProgramacao.Models;
             WriteLiteral(" |\r\n                ");
             EndContext();
             BeginContext(1070, 73, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9341968e128040da8f2c71491d8aef42", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d9fc33be03ea4a9f8c20155c2ec672af", async() => {
                 BeginContext(1132, 7, true);
                 WriteLiteral("Excluir");
                 EndContext();

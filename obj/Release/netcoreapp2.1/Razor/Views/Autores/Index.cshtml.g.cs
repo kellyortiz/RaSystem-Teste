@@ -65,7 +65,7 @@ using TesteProgramacao.Models;
             WriteLiteral("\r\n<h2>Autores</h2>\r\n\r\n<p>\r\n    ");
             EndContext();
             BeginContext(125, 44, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8a8d45dbd4a54fe987c50d9cc074c6ed", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "281e1bc3af46459eb66f5f6c2ee40210", async() => {
                 BeginContext(152, 13, true);
                 WriteLiteral("Novo autor(a)");
                 EndContext();
@@ -175,7 +175,7 @@ using TesteProgramacao.Models;
             WriteLiteral("\r\n            </td>\r\n            <td>\r\n                ");
             EndContext();
             BeginContext(1152, 70, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "009a2b5b4348461f943dd219a0d14895", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3170e9d128b4471abe2072519e345e05", async() => {
                 BeginContext(1212, 6, true);
                 WriteLiteral("Editar");
                 EndContext();
@@ -210,7 +210,7 @@ using TesteProgramacao.Models;
             WriteLiteral(" | \r\n                ");
             EndContext();
             BeginContext(1243, 69, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "00943dfebc7946499cc92c44bf6b48b4", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1f2c1e346b7341fdab0aea27dcc1c2b7", async() => {
                 BeginContext(1301, 7, true);
                 WriteLiteral("Excluir");
                 EndContext();

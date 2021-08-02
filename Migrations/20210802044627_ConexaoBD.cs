@@ -14,9 +14,9 @@ namespace TesteProgramacao.Migrations
                 {
                     autorId = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    NomeAutor = table.Column<string>(nullable: true),
-                    CPF = table.Column<string>(nullable: true),
-                    Celular = table.Column<string>(nullable: true),
+                    NomeAutor = table.Column<string>(maxLength: 100, nullable: true),
+                    CPF = table.Column<string>(maxLength: 11, nullable: true),
+                    Celular = table.Column<int>(maxLength: 11, nullable: false),
                     Email = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
@@ -30,8 +30,8 @@ namespace TesteProgramacao.Migrations
                 {
                     editoraId = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    CNPJ = table.Column<string>(nullable: true),
-                    NomeEditora = table.Column<string>(nullable: true),
+                    CNPJ = table.Column<string>(maxLength: 14, nullable: true),
+                    NomeEditora = table.Column<string>(maxLength: 100, nullable: true),
                     Endereco = table.Column<string>(nullable: true)
                 },
                 constraints: table =>

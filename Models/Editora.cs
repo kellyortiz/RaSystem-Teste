@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
+using Xunit;
 
 namespace TesteProgramacao.Models
 {
@@ -9,8 +11,18 @@ namespace TesteProgramacao.Models
     public class Editora
     {
         public int editoraId { get; set; }
+
+        [Display(Name = "CNPJ"),
+             DisplayFormat(DataFormatString = "{0:##.###.###/####-##}", ApplyFormatInEditMode = true),
+             StringLength(14, MinimumLength = 14)]
         public string CNPJ { get; set; }
+
+        [Display(Name = "Nome da Editora"),
+            StringLength(100),
+            RegularExpression(@"^[A-Z]+[a-zA-Z""'\s-]*$", ErrorMessage = "Apenas Letras!")]
         public string NomeEditora { get; set; }
+
+        [Display(Name = "Endereço")]
         public string Endereco { get; set; }
         public ICollection<Livro> livro { get; set; }
     }

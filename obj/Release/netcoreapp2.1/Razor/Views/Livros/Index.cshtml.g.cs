@@ -65,7 +65,7 @@ using TesteProgramacao.Models;
             WriteLiteral("\r\n<h2>Livros</h2>\r\n\r\n<p>\r\n    ");
             EndContext();
             BeginContext(124, 46, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "707a2f24ca964d759fcf0ef373726b3c", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "262eadaf4cd54b05b958a2ce45f3a18e", async() => {
                 BeginContext(151, 15, true);
                 WriteLiteral("Adicionar Livro");
                 EndContext();
@@ -215,7 +215,7 @@ using TesteProgramacao.Models;
             WriteLiteral("\r\n            </td>\r\n            <td>\r\n                ");
             EndContext();
             BeginContext(1573, 60, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "10b5169bdbd64a60b71bec93f972bd9b", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c45aa22a91f448808b44a4ebc4486897", async() => {
                 BeginContext(1623, 6, true);
                 WriteLiteral("Editar");
                 EndContext();
@@ -250,7 +250,7 @@ using TesteProgramacao.Models;
             WriteLiteral(" |\r\n               |\r\n                ");
             EndContext();
             BeginContext(1671, 63, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "931ff49d0bf74424977202ba5a4af41a", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b4573a3abc40463a8d33ccc7f115116e", async() => {
                 BeginContext(1723, 7, true);
                 WriteLiteral("Excluir");
                 EndContext();

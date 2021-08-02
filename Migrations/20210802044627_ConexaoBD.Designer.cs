@@ -10,7 +10,7 @@ using TesteProgramacao.Models;
 namespace TesteProgramacao.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20210802033953_ConexaoBD")]
+    [Migration("20210802044627_ConexaoBD")]
     partial class ConexaoBD
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -27,13 +27,16 @@ namespace TesteProgramacao.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("CPF");
+                    b.Property<string>("CPF")
+                        .HasMaxLength(11);
 
-                    b.Property<string>("Celular");
+                    b.Property<int>("Celular")
+                        .HasMaxLength(11);
 
                     b.Property<string>("Email");
 
-                    b.Property<string>("NomeAutor");
+                    b.Property<string>("NomeAutor")
+                        .HasMaxLength(100);
 
                     b.HasKey("autorId");
 
@@ -46,11 +49,13 @@ namespace TesteProgramacao.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("CNPJ");
+                    b.Property<string>("CNPJ")
+                        .HasMaxLength(14);
 
                     b.Property<string>("Endereco");
 
-                    b.Property<string>("NomeEditora");
+                    b.Property<string>("NomeEditora")
+                        .HasMaxLength(100);
 
                     b.HasKey("editoraId");
 
